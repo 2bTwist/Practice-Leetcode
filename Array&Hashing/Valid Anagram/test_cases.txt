@@ -1,0 +1,5 @@
+anagram,nagaram
+rat,car
+cheese,theese
+aacc,ccac
+a,ab
