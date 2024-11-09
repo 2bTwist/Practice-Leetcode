@@ -1,1 +1,10 @@
-***
+**** Uncomment each line of the of the for each choice of solution
+    NB: To uncomment, select all lines and press "Ctrl" + "/"
+
+**** For the test case file, you can add test cases of the following syntax
+
+    string, string
+
+    Example:
+
+    bat, cat
