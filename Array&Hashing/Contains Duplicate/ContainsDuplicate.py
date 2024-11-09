@@ -6,14 +6,31 @@ import sys
 
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
-        #Brute Force
-        #Time Complexity: O(n^2)
-        #Space Complexity: O(1)
-        for i in range(0, len(nums)):
-            for j in range((i+1), len(nums)):
-                if nums[i] == nums[j]:
-                    return True
-        return False
+        # #Brute Force
+        # #Time Complexity: O(n^2) because of nested for loop
+        # #Space Complexity: O(1) because no new value is created
+        # for i in range(0, len(nums)):
+        #     for j in range((i+1), len(nums)):
+        #         if nums[i] == nums[j]:
+        #             return True
+        # return False
+    
+        # #Sub-Optimal
+        # #Time Complexity: O(nlogn) because sorting takes logn then going through each item takes n time
+        # #Space Complexity: O(1)/O(n) depends on sorting algorithm but no new value is created.
+        # nums.sort()
+        # for i in range(1, len(nums)):
+        #     if nums[i] == nums[i - 1]:
+        #         return True
+        # return False
+
+        #Sub-Optimal
+        #Time Complexity: O(n) set goes through each item to create a set with no duplicates
+        #Space Complexity: O(n) depends on sorting algorithm but no new value is created.
+        if len(set(nums)) != len(nums):
+            return False
+        else:
+            return True
 
 if __name__ == "__main__":
     # Creating an instance of Solution
