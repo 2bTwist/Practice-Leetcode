@@ -13,9 +13,6 @@ class Solution:
         return False
 
 if __name__ == "__main__":
-    # Example input list
-    test_nums = [1, 2, 3, 4, 1]
-    
     # Creating an instance of Solution
     solution = Solution()
     
