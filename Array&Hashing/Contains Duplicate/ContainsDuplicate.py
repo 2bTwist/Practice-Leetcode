@@ -28,9 +28,9 @@ class Solution:
         #Time Complexity: O(n) set goes through each item to create a set with no duplicates
         #Space Complexity: O(n) depends on sorting algorithm but no new value is created.
         if len(set(nums)) != len(nums):
-            return False
-        else:
             return True
+        else:
+            return False
 
 if __name__ == "__main__":
     # Creating an instance of Solution
