@@ -12,6 +12,7 @@ This repo contains all the leetcode problems I have been practicing on for Techn
 When I started practicing leetcode, I was looking a resource where I can use to find and test every solution. Visually seeing how each solution both affects the runtime and space on the computer. So I decided to create this!
 Hopefully it helps you in your journey!
 
+You can find all these questions on <a href="https://neetcode.io/">NeetCode</a>
 
 ## Note
 Will be updating more questions as I go through them, please be patient
