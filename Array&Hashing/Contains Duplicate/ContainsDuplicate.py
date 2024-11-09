@@ -19,6 +19,12 @@ if __name__ == "__main__":
     # Creating an instance of Solution
     solution = Solution()
     
-    # Call the function and print the result
-    result = solution.hasDuplicate(test_nums)
-    print("Contains duplicate:", result)
+    # Open and read file with test cases
+    with open("test_cases.txt", "r") as file:
+        for number, line in enumerate(file, 1):
+            # map does integer casting on every value in each line
+            nums = list(map(int, line.strip().split(",")))
+
+            result =  solution.hasDuplicate(nums)
+
+            print(f"Case 1:{nums} = {result}")
