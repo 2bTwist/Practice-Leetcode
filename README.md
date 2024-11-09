@@ -15,5 +15,6 @@ Hopefully it helps you in your journey!
 You can find all these questions on <a href="https://neetcode.io/">NeetCode</a>
 
 ## Note
+Please make sure to run the .py program in the same directory as the .txt file
 Will be updating more questions as I go through them, please be patient
  
