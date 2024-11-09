@@ -6,7 +6,15 @@ class Solution:
         #Edge Case: If s and t are not of thesame length of strings
         if len(s) != len(t):
             return False
-        
+
+        # #Sub-Optimal
+        # #Time Complexity: O(nlogn) sorts in logn then compares each value for n
+        # #Space Complexity: O(1) or O(n) because of sorting algorithm
+        # return sorted(s) == sorted(t)
+
+        #Optimal
+        #Time Complexity: O(n) adds each value in s and t too dictionaries, thus n
+        #Space Complexity: O(1)        
         s_dict, t_dict = {}, {}
 
         for i in range(len(s)):
@@ -16,7 +24,8 @@ class Solution:
         for key in s_dict:
             if s_dict.get(key) != t_dict.get(key):
                 return False
-        
+        # or simply
+        # return s_dict == t_dict
         return True
 
 if __name__ == "__main__":

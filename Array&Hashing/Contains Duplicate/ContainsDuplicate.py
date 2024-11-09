@@ -24,7 +24,7 @@ class Solution:
         #         return True
         # return False
 
-        #Sub-Optimal
+        #Optimal
         #Time Complexity: O(n) set goes through each item to create a set with no duplicates
         #Space Complexity: O(n) depends on sorting algorithm but no new value is created.
         if len(set(nums)) != len(nums):

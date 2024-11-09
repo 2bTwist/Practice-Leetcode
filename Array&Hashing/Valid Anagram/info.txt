@@ -3,8 +3,8 @@
 
 **** For the test case file, you can add test cases of the following syntax
 
-    string, string
+    string,string
 
     Example:
 
-    bat, cat
+    bat,cat
