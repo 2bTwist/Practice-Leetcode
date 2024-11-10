@@ -3,14 +3,45 @@ import sys
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        #Brute Force
-        #Time Complexity: O(n) because it goes through every character in s
-        #Space Complexity: O(n) compares with a newly updated string
-        while '()' in s or '{}' in s or '[]' in s:
-            s = s.replace('()', '')
-            s = s.replace('{}', '')
-            s = s.replace('[]', '')
-        return s == ''
+        # #Brute Force
+        # #Time Complexity: O(n^2) 
+        # #Space Complexity: O(n) compares with a newly updated string
+        # while '()' in s or '{}' in s or '[]' in s:
+        #     s = s.replace('()', '')
+        #     s = s.replace('{}', '')
+        #     s = s.replace('[]', '')
+        # return s == ''
+    
+        #Optimal (This is my personal)
+        #Time Complexity: O(n) 
+        #Space Complexity: O(n) compares with a newly updated stack array
+        stack = []
+
+        for i in s:
+            if i == ")":
+                if len(stack) == 0:
+                    return False
+                if stack[-1] != "(":
+                    return False
+                else:
+                    stack.pop()
+            elif i == "]":
+                if len(stack) == 0:
+                    return False
+                if stack[-1] != "[":
+                    return False
+                else:
+                    stack.pop()
+            elif i == "}":
+                if len(stack) == 0:
+                    return False
+                if stack[-1] != "{":
+                    return False
+                else:
+                    stack.pop()
+            else:
+                stack.append(i)
+        return len(stack) == 0
 
 if __name__ == "__main__":
     # Creating an instance of Solution
