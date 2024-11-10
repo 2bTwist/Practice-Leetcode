@@ -5,17 +5,30 @@ import sys
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        #Brute Force
-        #Time Complexity: O(n^2) because of nested for loop
-        #Space Complexity: O(1) because no new value is created
-        index = []
-        for i in range (len(nums)):
-            pair =  target - nums[i]
-            for j in range (len(nums)):
-                if (nums[j] == pair) and (i != j):
-                    index.append(i)
-                    index.append(j)
-                    return index
+        # #Brute Force
+        # #Time Complexity: O(n^2) because of nested for loop
+        # #Space Complexity: O(1) because no new value is created
+        # index = []
+        # for i in range (len(nums)):
+        #     pair =  target - nums[i]
+        #     for j in range (len(nums)):
+        #         if (nums[j] == pair) and (i != j):
+        #             index.append(i)
+        #             index.append(j)
+        #             return index
+                
+        #Optimal
+        #Time Complexity: O(n) because we have to compare each value in the list
+        #Space Complexit: O(n) new dictionary could go from 1 to last element thus n-1th element
+        compare = {}
+
+        for i in range(len(nums)):
+            pair = target - nums[i]
+            
+            if pair not in compare:
+                compare[nums[i]] = i
+            else:
+                return [compare[pair], i]
 
 if __name__ == "__main__":
     # Creating an instance of Solution
