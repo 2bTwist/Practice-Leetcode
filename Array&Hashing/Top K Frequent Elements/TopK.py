@@ -16,8 +16,8 @@ class Solution:
     #     for i in nums:
     #         count[i] = 1 + count.get(i, 0)
 
-    #     for num, val in count.items():
-    #         output.append([val, num])
+    #     for num, freq in count.items():
+    #         output.append([freq, num])
         
     #     output.sort()
 
